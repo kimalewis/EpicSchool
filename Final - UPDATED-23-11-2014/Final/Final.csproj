@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D0D9E08-01E5-441A-B8D2-E6773CC93A53}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Final</RootNamespace>
+    <AssemblyName>Final</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministrativeStaff.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Alerts.cs" />
+    <Compile Include="Assessment.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrator.Designer.cs">
+      <DependentUpon>frmAdministrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class.Custom.cs" />
+    <Compile Include="ClassesSchedule.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassSchedule.Designer.cs">
+      <DependentUpon>frmClassSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Day.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Day.Custom.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="frmClassScheduling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassScheduling.Designer.cs">
+      <DependentUpon>frmClassScheduling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewParish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewParish.Designer.cs">
+      <DependentUpon>frmNewParish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewSchoolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewSchoolForm.Designer.cs">
+      <DependentUpon>frmNewSchoolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewSubject.Designer.cs">
+      <DependentUpon>frmNewSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewTeacher.Designer.cs">
+      <DependentUpon>frmNewTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewVillage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewVillage.Designer.cs">
+      <DependentUpon>frmNewVillage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParentAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParentAccount.Designer.cs">
+      <DependentUpon>frmParentAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintOptions.Designer.cs">
+      <DependentUpon>frmPrintOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchools.Designer.cs">
+      <DependentUpon>frmSchools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentAccount.Designer.cs">
+      <DependentUpon>frmStudentAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentAssessments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentAssessments.Designer.cs">
+      <DependentUpon>frmStudentAssessments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentRegistration.Designer.cs">
+      <DependentUpon>frmStudentRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeacherAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeacherAccount.Designer.cs">
+      <DependentUpon>frmTeacherAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserRegistration.Designer.cs">
+      <DependentUpon>frmUserRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parent.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Parish.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Parish.Custom.cs" />
+    <Compile Include="Principal.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrintReport.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="School.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="School.Custom.cs" />
+    <Compile Include="SchoolForm.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolForm.Custom.cs" />
+    <Compile Include="Student.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentClass.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsParent.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subject.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subject.Custom.cs" />
+    <Compile Include="Teacher.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Term.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Term.Custom.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.Custom.cs" />
+    <Compile Include="Village.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Village.Custom.cs" />
+    <EmbeddedResource Include="frmAdministrator.resx">
+      <DependentUpon>frmAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassSchedule.resx">
+      <DependentUpon>frmClassSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassScheduling.resx">
+      <DependentUpon>frmClassScheduling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewParish.resx">
+      <DependentUpon>frmNewParish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewSchoolForm.resx">
+      <DependentUpon>frmNewSchoolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewSubject.resx">
+      <DependentUpon>frmNewSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewTeacher.resx">
+      <DependentUpon>frmNewTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewVillage.resx">
+      <DependentUpon>frmNewVillage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParentAccount.resx">
+      <DependentUpon>frmParentAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintOptions.resx">
+      <DependentUpon>frmPrintOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchools.resx">
+      <DependentUpon>frmSchools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentAccount.resx">
+      <DependentUpon>frmStudentAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentAssessments.resx">
+      <DependentUpon>frmStudentAssessments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentRegistration.resx">
+      <DependentUpon>frmStudentRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeacherAccount.resx">
+      <DependentUpon>frmTeacherAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserRegistration.resx">
+      <DependentUpon>frmUserRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="Database.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Database.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Database.edmx.diagram">
+      <DependentUpon>Database.edmx</DependentUpon>
+    </None>
+    <None Include="Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MySuccess_Icons-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chalkboard-apple-624x300.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_folder_black.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

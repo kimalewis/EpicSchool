@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SchoolsModelStoreContainer">
+    <EntitySet Name="AdministrativeStaffs" EntityType="SchoolsModel.Store.AdministrativeStaffs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Assessments" EntityType="SchoolsModel.Store.Assessments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Classes" EntityType="SchoolsModel.Store.Classes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClassesSchedule" EntityType="SchoolsModel.Store.ClassesSchedule" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Days" EntityType="SchoolsModel.Store.Days" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Parents" EntityType="SchoolsModel.Store.Parents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Parishes" EntityType="SchoolsModel.Store.Parishes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Principals" EntityType="SchoolsModel.Store.Principals" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SchoolForms" EntityType="SchoolsModel.Store.SchoolForms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Schools" EntityType="SchoolsModel.Store.Schools" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StudentClasses" EntityType="SchoolsModel.Store.StudentClasses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Students" EntityType="SchoolsModel.Store.Students" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StudentsParents" EntityType="SchoolsModel.Store.StudentsParents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Subjects" EntityType="SchoolsModel.Store.Subjects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teachers" EntityType="SchoolsModel.Store.Teachers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Terms" EntityType="SchoolsModel.Store.Terms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="SchoolsModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Villages" EntityType="SchoolsModel.Store.Villages" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_AdministrativeStaffs_Parishes" Association="SchoolsModel.Store.FK_AdministrativeStaffs_Parishes">
+      <End Role="Parishes" EntitySet="Parishes" />
+      <End Role="AdministrativeStaffs" EntitySet="AdministrativeStaffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdministrativeStaffs_Schools" Association="SchoolsModel.Store.FK_AdministrativeStaffs_Schools">
+      <End Role="Schools" EntitySet="Schools" />
+      <End Role="AdministrativeStaffs" EntitySet="AdministrativeStaffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdministrativeStaffs_Users" Association="SchoolsModel.Store.FK_AdministrativeStaffs_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="AdministrativeStaffs" EntitySet="AdministrativeStaffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdministrativeStaffs_Villages" Association="SchoolsModel.Store.FK_AdministrativeStaffs_Villages">
+      <End Role="Villages" EntitySet="Villages" />
+      <End Role="AdministrativeStaffs" EntitySet="AdministrativeStaffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assessments_StudentClasses" Association="SchoolsModel.Store.FK_Assessments_StudentClasses">
+      <End Role="StudentClasses" EntitySet="StudentClasses" />
+      <End Role="Assessments" EntitySet="Assessments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Classes_SchoolForms" Association="SchoolsModel.Store.FK_Classes_SchoolForms">
+      <End Role="SchoolForms" EntitySet="SchoolForms" />
+      <End Role="Classes" EntitySet="Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Classes_Schools" Association="SchoolsModel.Store.FK_Classes_Schools">
+      <End Role="Schools" EntitySet="Schools" />
+      <End Role="Classes" EntitySet="Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Classes_Subjects" Association="SchoolsModel.Store.FK_Classes_Subjects">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="Classes" EntitySet="Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Classes_Teachers" Association="SchoolsModel.Store.FK_Classes_Teachers">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="Classes" EntitySet="Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Classes_Terms" Association="SchoolsModel.Store.FK_Classes_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="Classes" EntitySet="Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClassesSchedule_Classes" Association="SchoolsModel.Store.FK_ClassesSchedule_Classes">
+      <End Role="Classes" EntitySet="Classes" />
+      <End Role="ClassesSchedule" EntitySet="ClassesSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClassesSchedule_Days" Association="SchoolsModel.Store.FK_ClassesSchedule_Days">
+      <End Role="Days" EntitySet="Days" />
+      <End Role="ClassesSchedule" EntitySet="ClassesSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Parents_Users" Association="SchoolsModel.Store.FK_Parents_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Parents" EntitySet="Parents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Principals_Parishes" Association="SchoolsModel.Store.FK_Principals_Parishes">
+      <End Role="Parishes" EntitySet="Parishes" />
+      <End Role="Principals" EntitySet="Principals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Principals_Schools" Association="SchoolsModel.Store.FK_Principals_Schools">
+      <End Role="Schools" EntitySet="Schools" />
+      <End Role="Principals" EntitySet="Principals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Principals_Users" Association="SchoolsModel.Store.FK_Principals_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Principals" EntitySet="Principals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Principals_Villages" Association="SchoolsModel.Store.FK_Principals_Villages">
+      <End Role="Villages" EntitySet="Villages" />
+      <End Role="Principals" EntitySet="Principals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schools_Parishes" Association="SchoolsModel.Store.FK_Schools_Parishes">
+      <End Role="Parishes" EntitySet="Parishes" />
+      <End Role="Schools" EntitySet="Schools" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schools_Villages" Association="SchoolsModel.Store.FK_Schools_Villages">
+      <End Role="Villages" EntitySet="Villages" />
+      <End Role="Schools" EntitySet="Schools" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentClasses_Classes" Association="SchoolsModel.Store.FK_StudentClasses_Classes">
+      <End Role="Classes" EntitySet="Classes" />
+      <End Role="StudentClasses" EntitySet="StudentClasses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentClasses_Students" Association="SchoolsModel.Store.FK_StudentClasses_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="StudentClasses" EntitySet="StudentClasses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Forms" Association="SchoolsModel.Store.FK_Students_Forms">
+      <End Role="SchoolForms" EntitySet="SchoolForms" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Parishes" Association="SchoolsModel.Store.FK_Students_Parishes">
+      <End Role="Parishes" EntitySet="Parishes" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Schools" Association="SchoolsModel.Store.FK_Students_Schools">
+      <End Role="Schools" EntitySet="Schools" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Users" Association="SchoolsModel.Store.FK_Students_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Villages" Association="SchoolsModel.Store.FK_Students_Villages">
+      <End Role="Villages" EntitySet="Villages" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentsParents_Parents" Association="SchoolsModel.Store.FK_StudentsParents_Parents">
+      <End Role="Parents" EntitySet="Parents" />
+      <End Role="StudentsParents" EntitySet="StudentsParents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentsParents_Students" Association="SchoolsModel.Store.FK_StudentsParents_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="StudentsParents" EntitySet="StudentsParents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teachers_Parishes" Association="SchoolsModel.Store.FK_Teachers_Parishes">
+      <End Role="Parishes" EntitySet="Parishes" />
+      <End Role="Teachers" EntitySet="Teachers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teachers_Schools" Association="SchoolsModel.Store.FK_Teachers_Schools">
+      <End Role="Schools" EntitySet="Schools" />
+      <End Role="Teachers" EntitySet="Teachers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teachers_Users" Association="SchoolsModel.Store.FK_Teachers_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Teachers" EntitySet="Teachers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teachers_Villages" Association="SchoolsModel.Store.FK_Teachers_Villages">
+      <End Role="Villages" EntitySet="Villages" />
+      <End Role="Teachers" EntitySet="Teachers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AdministrativeStaffs">
+    <Key>
+      <PropertyRef Name="AdministrativeStaffID" />
+    </Key>
+    <Property Name="AdministrativeStaffID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MiddleInitial" Type="nchar" MaxLength="1" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SchoolCode" Type="int" Nullable="false" />
+    <Property Name="HomePhone" Type="varchar" MaxLength="50" />
+    <Property Name="CellPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="VillageID" Type="int" Nullable="false" />
+    <Property Name="ParishID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Assessments">
+    <Key>
+      <PropertyRef Name="AssessmentID" />
+    </Key>
+    <Property Name="AssessmentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StudentClassesID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Score" Type="numeric" Precision="6" Scale="2" />
+  </EntityType>
+  <EntityType Name="Classes">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SchoolCode" Type="int" Nullable="false" />
+    <Property Name="SubjectCode" Type="int" Nullable="false" />
+    <Property Name="TeacherID" Type="int" Nullable="false" />
+    <Property Name="FormID" Type="int" Nullable="false" />
+    <Property Name="TermID" Type="int" Nullable="false" />
+    <Property Name="AcademicYear" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ClassesSchedule">
+    <Key>
+      <PropertyRef Name="ClassScheduleID" />
+    </Key>
+    <Property Name="ClassScheduleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClassID" Type="int" Nullable="false" />
+    <Property Name="DayID" Type="int" />
+    <Property Name="StartTime" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="EndTime" Type="nvarchar" Nullable="false" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="Days">
+    <Key>
+      <PropertyRef Name="DayID" />
+    </Key>
+    <Property Name="DayID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DayName" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Parents">
+    <Key>
+      <PropertyRef Name="ParentID" />
+    </Key>
+    <Property Name="ParentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Prefix" Type="nvarchar" MaxLength="3" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MiddleInitial" Type="nvarchar" MaxLength="1" />
+    <Property Name="LastName" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="CellPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="WorkPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parishes">
+    <Key>
+      <PropertyRef Name="ParishID" />
+    </Key>
+    <Property Name="ParishID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ParishName" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Principals">
+    <Key>
+      <PropertyRef Name="PrincipalID" />
+    </Key>
+    <Property Name="PrincipalID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Prefix" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="Firstname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MiddleInitial" Type="nvarchar" MaxLength="1" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="CellPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="VillageID" Type="int" Nullable="false" />
+    <Property Name="ParishID" Type="int" Nullable="false" />
+    <Property Name="SchoolCode" Type="int" Nullable="false" />
+    <Property Name="DOB" Type="date" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tenure" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="SchoolForms">
+    <Key>
+      <PropertyRef Name="FormID" />
+    </Key>
+    <Property Name="FormID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FormName" Type="nvarchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Schools">
+    <Key>
+      <PropertyRef Name="SchoolCode" />
+    </Key>
+    <Property Name="SchoolCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SchoolName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="OfficeNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="VillageID" Type="int" Nullable="false" />
+    <Property Name="ParishID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StudentClasses">
+    <Key>
+      <PropertyRef Name="StudentClassesID" />
+    </Key>
+    <Property Name="StudentClassesID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StudentID" Type="int" Nullable="false" />
+    <Property Name="ClassID" Type="int" Nullable="false" />
+    <Property Name="Grade" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="Status" Type="nvarchar" MaxLength="25" />
+    <Property Name="ApprovedBy" Type="int" />
+    <Property Name="SignOffBy" Type="int" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="M.I." Type="nvarchar" MaxLength="1" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="DOB" Type="date" Nullable="false" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="25" />
+    <Property Name="AdmissionDat" Type="date" Nullable="false" />
+    <Property Name="ExpectedGraduationDate" Type="date" />
+    <Property Name="FormID" Type="int" Nullable="false" />
+    <Property Name="SchoolCode" Type="int" Nullable="false" />
+    <Property Name="VillageID" Type="int" Nullable="false" />
+    <Property Name="ParishID" Type="int" Nullable="false" />
+    <Property Name="PriorEducation" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StudentsParents">
+    <Key>
+      <PropertyRef Name="StudentParentsID" />
+    </Key>
+    <Property Name="StudentParentsID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StudentID" Type="int" Nullable="false" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="Relationship" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Subjects">
+    <Key>
+      <PropertyRef Name="SubjectCode" />
+    </Key>
+    <Property Name="SubjectCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubjectName" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Teachers">
+    <Key>
+      <PropertyRef Name="TeacherID" />
+    </Key>
+    <Property Name="TeacherID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Prefix" Type="nvarchar" MaxLength="3" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MiddleInitial" Type="nvarchar" MaxLength="1" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Homephone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cellphone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="VillageID" Type="int" Nullable="false" />
+    <Property Name="ParishID" Type="int" Nullable="false" />
+    <Property Name="SchoolCode" Type="int" Nullable="false" />
+    <Property Name="DOB" Type="date" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Terms">
+    <Key>
+      <PropertyRef Name="TermID" />
+    </Key>
+    <Property Name="TermID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TermName" Type="nvarchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="AccessType" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Villages">
+    <Key>
+      <PropertyRef Name="VillageID" />
+    </Key>
+    <Property Name="VillageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VillageName" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_AdministrativeStaffs_Parishes">
+    <End Role="Parishes" Type="SchoolsModel.Store.Parishes" Multiplicity="1" />
+    <End Role="AdministrativeStaffs" Type="SchoolsModel.Store.AdministrativeStaffs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parishes">
+        <PropertyRef Name="ParishID" />
+      </Principal>
+      <Dependent Role="AdministrativeStaffs">
+        <PropertyRef Name="ParishID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdministrativeStaffs_Schools">
+    <End Role="Schools" Type="SchoolsModel.Store.Schools" Multiplicity="1" />
+    <End Role="AdministrativeStaffs" Type="SchoolsModel.Store.AdministrativeStaffs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schools">
+        <PropertyRef Name="SchoolCode" />
+      </Principal>
+      <Dependent Role="AdministrativeStaffs">
+        <PropertyRef Name="SchoolCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdministrativeStaffs_Users">
+    <End Role="Users" Type="SchoolsModel.Store.Users" Multiplicity="1" />
+    <End Role="AdministrativeStaffs" Type="SchoolsModel.Store.AdministrativeStaffs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="AdministrativeStaffs">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdministrativeStaffs_Villages">
+    <End Role="Villages" Type="SchoolsModel.Store.Villages" Multiplicity="1" />
+    <End Role="AdministrativeStaffs" Type="SchoolsModel.Store.AdministrativeStaffs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Villages">
+        <PropertyRef Name="VillageID" />
+      </Principal>
+      <Dependent Role="AdministrativeStaffs">
+        <PropertyRef Name="VillageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assessments_StudentClasses">
+    <End Role="StudentClasses" Type="SchoolsModel.Store.StudentClasses" Multiplicity="1" />
+    <End Role="Assessments" Type="SchoolsModel.Store.Assessments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentClasses">
+        <PropertyRef Name="StudentClassesID" />
+      </Principal>
+      <Dependent Role="Assessments">
+        <PropertyRef Name="StudentClassesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Classes_SchoolForms">
+    <End Role="SchoolForms" Type="SchoolsModel.Store.SchoolForms" Multiplicity="1" />
+    <End Role="Classes" Type="SchoolsModel.Store.Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolForms">
+        <PropertyRef Name="FormID" />
+      </Principal>
+      <Dependent Role="Classes">
+        <PropertyRef Name="FormID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Classes_Schools">
+    <End Role="Schools" Type="SchoolsModel.Store.Schools" Multiplicity="1" />
+    <End Role="Classes" Type="SchoolsModel.Store.Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schools">
+        <PropertyRef Name="SchoolCode" />
+      </Principal>
+      <Dependent Role="Classes">
+        <PropertyRef Name="SchoolCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Classes_Subjects">
+    <End Role="Subjects" Type="SchoolsModel.Store.Subjects" Multiplicity="1" />
+    <End Role="Classes" Type="SchoolsModel.Store.Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="SubjectCode" />
+      </Principal>
+      <Dependent Role="Classes">
+        <PropertyRef Name="SubjectCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Classes_Teachers">
+    <End Role="Teachers" Type="SchoolsModel.Store.Teachers" Multiplicity="1" />
+    <End Role="Classes" Type="SchoolsModel.Store.Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="TeacherID" />
+      </Principal>
+      <Dependent Role="Classes">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Classes_Terms">
+    <End Role="Terms" Type="SchoolsModel.Store.Terms" Multiplicity="1" />
+    <End Role="Classes" Type="SchoolsModel.Store.Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terms">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="Classes">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClassesSchedule_Classes">
+    <End Role="Classes" Type="SchoolsModel.Store.Classes" Multiplicity="1" />
+    <End Role="ClassesSchedule" Type="SchoolsModel.Store.ClassesSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classes">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="ClassesSchedule">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClassesSchedule_Days">
+    <End Role="Days" Type="SchoolsModel.Store.Days" Multiplicity="0..1" />
+    <End Role="ClassesSchedule" Type="SchoolsModel.Store.ClassesSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Days">
+        <PropertyRef Name="DayID" />
+      </Principal>
+      <Dependent Role="ClassesSchedule">
+        <PropertyRef Name="DayID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Parents_Users">
+    <End Role="Users" Type="SchoolsModel.Store.Users" Multiplicity="1" />
+    <End Role="Parents" Type="SchoolsModel.Store.Parents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Parents">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Principals_Parishes">
+    <End Role="Parishes" Type="SchoolsModel.Store.Parishes" Multiplicity="1" />
+    <End Role="Principals" Type="SchoolsModel.Store.Principals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parishes">
+        <PropertyRef Name="ParishID" />
+      </Principal>
+      <Dependent Role="Principals">
+        <PropertyRef Name="ParishID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Principals_Schools">
+    <End Role="Schools" Type="SchoolsModel.Store.Schools" Multiplicity="1" />
+    <End Role="Principals" Type="SchoolsModel.Store.Principals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schools">
+        <PropertyRef Name="SchoolCode" />
+      </Principal>
+      <Dependent Role="Principals">
+        <PropertyRef Name="SchoolCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Principals_Users">
+    <End Role="Users" Type="SchoolsModel.Store.Users" Multiplicity="1" />
+    <End Role="Principals" Type="SchoolsModel.Store.Principals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Principals">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Principals_Villages">
+    <End Role="Villages" Type="SchoolsModel.Store.Villages" Multiplicity="1" />
+    <End Role="Principals" Type="SchoolsModel.Store.Principals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Villages">
+        <PropertyRef Name="VillageID" />
+      </Principal>
+      <Dependent Role="Principals">
+        <PropertyRef Name="VillageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schools_Parishes">
+    <End Role="Parishes" Type="SchoolsModel.Store.Parishes" Multiplicity="1" />
+    <End Role="Schools" Type="SchoolsModel.Store.Schools" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parishes">
+        <PropertyRef Name="ParishID" />
+      </Principal>
+      <Dependent Role="Schools">
+        <PropertyRef Name="ParishID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schools_Villages">
+    <End Role="Villages" Type="SchoolsModel.Store.Villages" Multiplicity="1" />
+    <End Role="Schools" Type="SchoolsModel.Store.Schools" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Villages">
+        <PropertyRef Name="VillageID" />
+      </Principal>
+      <Dependent Role="Schools">
+        <PropertyRef Name="VillageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentClasses_Classes">
+    <End Role="Classes" Type="SchoolsModel.Store.Classes" Multiplicity="1" />
+    <End Role="StudentClasses" Type="SchoolsModel.Store.StudentClasses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classes">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="StudentClasses">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentClasses_Students">
+    <End Role="Students" Type="SchoolsModel.Store.Students" Multiplicity="1" />
+    <End Role="StudentClasses" Type="SchoolsModel.Store.StudentClasses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="StudentClasses">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Forms">
+    <End Role="SchoolForms" Type="SchoolsModel.Store.SchoolForms" Multiplicity="1" />
+    <End Role="Students" Type="SchoolsModel.Store.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolForms">
+        <PropertyRef Name="FormID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="FormID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Parishes">
+    <End Role="Parishes" Type="SchoolsModel.Store.Parishes" Multiplicity="1" />
+    <End Role="Students" Type="SchoolsModel.Store.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parishes">
+        <PropertyRef Name="ParishID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="ParishID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Schools">
+    <End Role="Schools" Type="SchoolsModel.Store.Schools" Multiplicity="1" />
+    <End Role="Students" Type="SchoolsModel.Store.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schools">
+        <PropertyRef Name="SchoolCode" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="SchoolCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Users">
+    <End Role="Users" Type="SchoolsModel.Store.Users" Multiplicity="1" />
+    <End Role="Students" Type="SchoolsModel.Store.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Villages">
+    <End Role="Villages" Type="SchoolsModel.Store.Villages" Multiplicity="1" />
+    <End Role="Students" Type="SchoolsModel.Store.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Villages">
+        <PropertyRef Name="VillageID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="VillageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentsParents_Parents">
+    <End Role="Parents" Type="SchoolsModel.Store.Parents" Multiplicity="1" />
+    <End Role="StudentsParents" Type="SchoolsModel.Store.StudentsParents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parents">
+        <PropertyRef Name="ParentID" />
+      </Principal>
+      <Dependent Role="StudentsParents">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentsParents_Students">
+    <End Role="Students" Type="SchoolsModel.Store.Students" Multiplicity="1" />
+    <End Role="StudentsParents" Type="SchoolsModel.Store.StudentsParents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="StudentsParents">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teachers_Parishes">
+    <End Role="Parishes" Type="SchoolsModel.Store.Parishes" Multiplicity="1" />
+    <End Role="Teachers" Type="SchoolsModel.Store.Teachers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parishes">
+        <PropertyRef Name="ParishID" />
+      </Principal>
+      <Dependent Role="Teachers">
+        <PropertyRef Name="ParishID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teachers_Schools">
+    <End Role="Schools" Type="SchoolsModel.Store.Schools" Multiplicity="1" />
+    <End Role="Teachers" Type="SchoolsModel.Store.Teachers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schools">
+        <PropertyRef Name="SchoolCode" />
+      </Principal>
+      <Dependent Role="Teachers">
+        <PropertyRef Name="SchoolCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teachers_Users">
+    <End Role="Users" Type="SchoolsModel.Store.Users" Multiplicity="1" />
+    <End Role="Teachers" Type="SchoolsModel.Store.Teachers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Teachers">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teachers_Villages">
+    <End Role="Villages" Type="SchoolsModel.Store.Villages" Multiplicity="1" />
+    <End Role="Teachers" Type="SchoolsModel.Store.Teachers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Villages">
+        <PropertyRef Name="VillageID" />
+      </Principal>
+      <Dependent Role="Teachers">
+        <PropertyRef Name="VillageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
