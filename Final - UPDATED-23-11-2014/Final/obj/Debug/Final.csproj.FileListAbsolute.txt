@@ -197,3 +197,6 @@ C:\Users\Kima\Desktop\Final - UPDATED-23-11-2014\Final\obj\Debug\Final.Propertie
 C:\Users\Kima\Desktop\Final - UPDATED-23-11-2014\Final\obj\Debug\Final.csproj.GenerateResource.Cache
 C:\Users\Kima\Desktop\Final - UPDATED-23-11-2014\Final\obj\Debug\Final.exe
 C:\Users\Kima\Desktop\Final - UPDATED-23-11-2014\Final\obj\Debug\Final.pdb
+C:\Users\Kima\Desktop\EpicSchool\Final - UPDATED-23-11-2014\Final\bin\Debug\Final.exe.config
+C:\Users\Kima\Desktop\EpicSchool\Final - UPDATED-23-11-2014\Final\obj\Debug\Final.exe
+C:\Users\Kima\Desktop\EpicSchool\Final - UPDATED-23-11-2014\Final\obj\Debug\Final.pdb
